@@ -1,0 +1,133 @@
+/* VARIABLES */
+:root {
+  --primary-color: #1b4965;   /* azul profundo */
+  --secondary-color: #62b6cb; /* azul claro */
+  --accent1-color: #cae9ff;   /* azul muy claro */
+  --accent2-color: #5fa8d3;   /* azul medio */
+  --heading-font: "Georgia", serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: var(--body-font);
+  color: var(--primary-color);
+}
+
+/* LAYOUT */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* HEADINGS */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* SPACING */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* HEADER */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+}
+
+header img {
+  margin: 10px;
+}
+
+/* NAVIGATION */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* HERO TITLE */
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.8;
+  background-color: var(--accent2-color);
+  color: white;
+}
+
+/* HERO ARTICLE */
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* IMAGE INSIDE ARTICLE */
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 10px;
+  border: 2px solid var(--primary-color);
+}
+
+/* SECTIONS */
+section {
+  background-color: var(--accent1-color);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* SOCIAL MEDIA */
+.socialmedia {
+  display: flex;
+  justify-content: center;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
+  width: 30px;
+  margin: 5px;
+}
