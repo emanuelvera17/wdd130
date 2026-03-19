@@ -1,4 +1,3 @@
-
 :root {
   --primary-color: #1b4965;   
   --secondary-color: #62b6cb; 
@@ -19,6 +18,7 @@
 body {
   font-family: var(--body-font);
   color: var(--primary-color);
+  background-color: var(--secondary-color); /* 👈 FIX IMPORTANTE */
 }
 
 
@@ -46,6 +46,7 @@ header {
   display: grid;
   grid-template-columns: 150px 1fr;
   align-items: center;
+  border-bottom: 5px solid var(--accent2-color); /* 👈 REFUERZO */
 }
 
 header img {
@@ -63,6 +64,10 @@ nav a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
 }
 
 
@@ -95,6 +100,7 @@ nav a {
   left: 20px;
   right: 20px;
   background-color: rgba(255, 255, 255, 0.85);
+  border: 2px solid var(--accent2-color);
 }
 
 
@@ -108,6 +114,7 @@ nav a {
 
 section {
   background-color: var(--accent1-color);
+  border-left: 5px solid var(--accent2-color);
 }
 
 
@@ -131,4 +138,3 @@ footer {
   width: 30px;
   margin: 5px;
 }
-
