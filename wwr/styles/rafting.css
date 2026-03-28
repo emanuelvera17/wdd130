@@ -17,8 +17,8 @@
 
 body {
   font-family: var(--body-font);
-  color: var(--primary-color);
-  background-color: var(--secondary-color); /* 👈 FIX IMPORTANTE */
+  color: black; 
+  background-color: var(--secondary-color);
 }
 
 
@@ -46,7 +46,7 @@ header {
   display: grid;
   grid-template-columns: 150px 1fr;
   align-items: center;
-  border-bottom: 5px solid var(--accent2-color); /* 👈 REFUERZO */
+  border-bottom: 5px solid var(--accent2-color);
 }
 
 header img {
@@ -69,6 +69,7 @@ nav a {
 nav a:hover {
   color: var(--secondary-color);
 }
+
 
 
 .hero {
@@ -112,10 +113,37 @@ nav a:hover {
 }
 
 
+
 section {
   background-color: var(--accent1-color);
   border-left: 5px solid var(--accent2-color);
 }
+
+
+/* ✅ ADVENTURE SECTION (FIGURES EN HORIZONTAL) */
+section:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+section:nth-of-type(2) figure {
+  text-align: center;
+  flex: 1;
+}
+
+section:nth-of-type(2) img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+section:nth-of-type(2) figcaption {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
 
 
 footer {
@@ -127,7 +155,7 @@ footer {
 
 .socialmedia {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; 
 }
 
 .socialmedia a {
