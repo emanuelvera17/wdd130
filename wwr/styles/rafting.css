@@ -120,7 +120,7 @@ section {
 }
 
 
-/* ✅ ADVENTURE SECTION (FIGURES EN HORIZONTAL) */
+
 section:nth-of-type(2) {
   display: flex;
   justify-content: space-between;
