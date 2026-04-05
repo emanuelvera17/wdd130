@@ -1,208 +1,125 @@
 :root {
-  --primary-color: #1b4965;   
-  --secondary-color: #62b6cb; 
-  --accent1-color: #cae9ff;   
-  --accent2-color: #5fa8d3;   
-  --heading-font: "Georgia", serif;
-  --body-font: Arial, Helvetica, sans-serif;
+  --primary-color: #1b4965;   /* Tu azul marino */
+  --secondary-color: #62b6cb; /* Tu azul claro */
+  --accent1-color: #cae9ff;   /* Fondo de secciones */
+  --accent2-color: #5fa8d3;   /* Bordes */
 }
 
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: var(--body-font);
-  color: black; 
+  font-family: Arial, Helvetica, sans-serif;
   background-color: var(--secondary-color);
+  color: #333;
 }
-
 
 header, main, footer {
-  width: 840px;
+  max-width: 1000px;
   margin: 0 auto;
+  background-color: white;
 }
 
-
-h1, h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-}
-
-
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
-}
-
-
+/* HEADER */
 header {
   background-color: var(--primary-color);
-  color: white;
-  display: grid;
-  grid-template-columns: 150px 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 15px 30px;
   border-bottom: 5px solid var(--accent2-color);
 }
 
-header img {
-  margin: 10px;
-}
+header img { width: 100px; }
 
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-}
+nav ul { display: flex; list-style: none; gap: 20px; }
 
 nav a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
   font-weight: bold;
+  padding: 5px 10px;
+  border: 1px solid transparent;
 }
 
 nav a:hover {
-  color: var(--secondary-color);
+  border: 1px solid white;
+  background-color: rgba(255,255,255,0.1);
 }
 
-
-
-.hero {
-  position: relative;
-}
-
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-
-.hero h1 {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  padding: 16px;
+/* INFO EMPRESA */
+.company-header {
   text-align: center;
-  opacity: 0.8;
-  background-color: var(--primary-color);
-  color: white;
+  padding: 30px;
+  background-color: white;
 }
 
+.company-header h1 { color: var(--primary-color); margin-bottom: 10px; }
 
-.hero article {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background-color: rgba(255, 255, 255, 0.85);
-  border: 2px solid var(--accent2-color);
-}
-
-
-.hero article img {
-  float: right;
-  width: 125px;
-  margin-left: 10px;
-  border: 2px solid var(--primary-color);
-}
-
-
-
-section {
+/* GRID CONTACTO (MAPA Y FORM) */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 30px;
+  padding: 20px;
   background-color: var(--accent1-color);
-  border-left: 5px solid var(--accent2-color);
 }
 
-
-
-section:nth-of-type(2) {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
+.map-container iframe {
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
 
-section:nth-of-type(2) figure {
-  text-align: center;
-  flex: 1;
-}
+/* FORMULARIO */
+.form-container form { display: flex; flex-direction: column; gap: 15px; }
 
-section:nth-of-type(2) img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
+.input-group { display: flex; flex-direction: column; }
 
-section:nth-of-type(2) figcaption {
-  margin-top: 5px;
-  font-size: 0.9rem;
-  color: var(--primary-color);
-}
+.input-group label { font-weight: bold; margin-bottom: 5px; }
 
-
-
-footer {
-  text-align: center;
-  background-color: var(--primary-color);
-  color: white;
-}
-
-
-.socialmedia {
-  display: flex;
-  justify-content: flex-end; 
-}
-
-.socialmedia a {
-  text-decoration: none;
-}
-
-.socialmedia img {
-  width: 30px;
-  margin: 5px;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input, textarea {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
 
 button {
   background-color: var(--primary-color);
   color: white;
-  padding: 10px;
+  padding: 12px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
 }
 
-button:hover {
-  background-color: var(--accent2-color);
-}
+button:hover { background-color: var(--accent2-color); }
 
-iframe {
-  margin-top: 10px;
-  border: none;
-}
-
-section figure {
-  display: inline-block;
-  width: 30%;
+/* EQUIPO */
+.team-section {
+  padding: 40px 20px;
   text-align: center;
+  border-top: 2px solid var(--accent2-color);
 }
 
-section figure img {
-  width: 100%;
-  border-radius: 5px;
+.team-display {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  gap: 15px;
 }
+
+.team-display figure img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* Los hace circulares para que se vea más moderno */
+  border: 4px solid var(--primary-color);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socialmedia img { width: 30px; margin-left: 10px; }
