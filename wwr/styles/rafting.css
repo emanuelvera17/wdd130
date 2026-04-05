@@ -62,8 +62,9 @@ header nav a:hover {
 }
 
 .map-container iframe {
-  border: none; /* Quitamos el estilo inline del HTML y lo ponemos aquí */
-  border-radius: 8px;
+    width: 100%; /* El CSS sí acepta porcentajes sin problemas */
+    border: none;
+    border-radius: 8px;
 }
 
 /* FORMULARIO */
