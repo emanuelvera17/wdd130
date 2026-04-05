@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #1b4965;   /* Tu azul marino */
-  --secondary-color: #62b6cb; /* Tu azul claro */
-  --accent1-color: #cae9ff;   /* Fondo de secciones */
-  --accent2-color: #5fa8d3;   /* Bordes */
+  --primary-color: #1b4965;
+  --secondary-color: #62b6cb;
+  --accent1-color: #cae9ff;
+  --accent2-color: #5fa8d3;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -31,51 +31,45 @@ header {
 
 header img { width: 100px; }
 
-nav ul { display: flex; list-style: none; gap: 20px; }
+header nav { display: flex; gap: 20px; }
 
-nav a {
-  color: white;
+header nav a {
+  color: white; /* Asegura buen contraste (WCAG AA) */
   text-decoration: none;
   font-weight: bold;
   padding: 5px 10px;
-  border: 1px solid transparent;
 }
 
-nav a:hover {
-  border: 1px solid white;
-  background-color: rgba(255,255,255,0.1);
+header nav a:hover {
+  text-decoration: underline;
 }
 
 /* INFO EMPRESA */
 .company-header {
   text-align: center;
   padding: 30px;
-  background-color: white;
 }
 
-.company-header h1 { color: var(--primary-color); margin-bottom: 10px; }
+.company-header h1 { color: var(--primary-color); }
 
-/* GRID CONTACTO (MAPA Y FORM) */
+/* GRID CONTACTO */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
   padding: 20px;
   background-color: var(--accent1-color);
 }
 
 .map-container iframe {
+  border: none; /* Quitamos el estilo inline del HTML y lo ponemos aquí */
   border-radius: 8px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
 
 /* FORMULARIO */
 .form-container form { display: flex; flex-direction: column; gap: 15px; }
-
 .input-group { display: flex; flex-direction: column; }
-
 .input-group label { font-weight: bold; margin-bottom: 5px; }
-
 input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
 
 button {
@@ -88,27 +82,14 @@ button {
   font-weight: bold;
 }
 
-button:hover { background-color: var(--accent2-color); }
-
-/* EQUIPO */
-.team-section {
-  padding: 40px 20px;
-  text-align: center;
-  border-top: 2px solid var(--accent2-color);
-}
-
-.team-display {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  gap: 15px;
-}
-
+/* TEAM */
+.team-section { padding: 40px 20px; text-align: center; }
+.team-display { display: flex; justify-content: space-around; gap: 15px; }
 .team-display figure img {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  border-radius: 50%; /* Los hace circulares para que se vea más moderno */
+  border-radius: 8px;
   border: 4px solid var(--primary-color);
 }
 
@@ -122,4 +103,5 @@ footer {
   align-items: center;
 }
 
-.socialmedia img { width: 30px; margin-left: 10px; }
+.socialmedia { display: flex; gap: 10px; }
+.socialmedia img { width: 30px; }
