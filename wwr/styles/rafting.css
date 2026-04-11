@@ -168,3 +168,23 @@ footer {
 .socialmedia img {
   width: 25px;
 }
+/* Quitar borde del mapa iframe (Requisito de la rúbrica) */
+iframe {
+    border: none;
+    width: 100%; /* Para que sea responsivo */
+}
+
+/* Estilo para los empleados (Sección Team) */
+.team-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.employee img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%; /* Opcional: fotos circulares se ven profesionales */
+}
