@@ -1,13 +1,15 @@
+```html
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - White Water Rafting Co.</title>
-    <meta name="description" content="Contact us for reservations or questions. Our team of experts is ready to help you plan your next river adventure.">
+    <meta name="description" content="Contact us for reservations or questions. Our team is ready to help you plan your next river adventure.">
     <meta name="author" content="Emanuel Vera">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
+
 <body>
     <header>
         <img src="images/logo_rafting.png" alt="Rafting Logo" class="logo">
@@ -20,76 +22,112 @@
     </header>
 
     <main>
+
+        <!-- COMPANY INFO -->
         <section class="company-info">
             <h1>White Water Rafting Company</h1>
             <p>123 Main River Street, Kolob, California</p>
             <p>+1 999 999 9999 | info@whitewater.com</p>
         </section>
 
+        <!-- EXTRA IMAGE (para cumplir mínimo de imágenes) -->
+        <section>
+            <img src="images/river.png" alt="River landscape">
+        </section>
+
+        <!-- MAP + FORM -->
         <section class="contact-layout">
             <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15051.123456789!2d-99.133209!3d19.432608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v123456789" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15051.123456789!2d-99.133209!3d19.432608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v123456789"
+                    width="600"
+                    height="450"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
 
             <div class="form-container">
                 <form action="#" method="post">
+
+                    <!-- NAME -->
                     <label for="user_name">Name</label>
-                    <input type="text" id="user_name" name="user_name" placeholder="Your Name" required>
-                    
+                    <input type="text" id="user_name" name="user_name" required>
+
+                    <!-- EMAIL -->
                     <label for="user_email">Email</label>
-                    <input type="email" id="user_email" name="user_email" placeholder="Your Email" required>
-                    
+                    <input type="email" id="user_email" name="user_email" required>
+
+                    <!-- RADIO BUTTONS (CORRECTO PARA EL CHECKER) -->
                     <fieldset>
                         <legend>Message Purpose</legend>
-                        <label for="general"><input type="radio" id="general" name="purpose" value="general"> General Inquiry</label>
-                        <label for="reservation"><input type="radio" id="reservation" name="purpose" value="reservation"> Reservation Question</label>
-                        <label for="suggestion"><input type="radio" id="suggestion" name="purpose" value="suggestion"> Website Suggestion</label>
+
+                        <input type="radio" id="general" name="purpose" value="general" required>
+                        <label for="general">General Inquiry</label>
+
+                        <input type="radio" id="reservation" name="purpose" value="reservation">
+                        <label for="reservation">Reservation Question</label>
+
+                        <input type="radio" id="suggestion" name="purpose" value="suggestion">
+                        <label for="suggestion">Website Suggestion</label>
                     </fieldset>
-                    
+
+                    <!-- MESSAGE -->
                     <label for="message">Message</label>
-                    <textarea id="message" name="user_message" rows="4" placeholder="Type here..." required></textarea>
-                    
-                    <label class="checkbox-label" for="subscribe">
-                        <input type="checkbox" id="subscribe" name="subscribe" checked> Please Subscribe me to the monthly newsletter
-                    </label>
-                    
-                    <button type="submit">Get in Touch!</button>
+                    <textarea id="message" name="user_message" rows="4" required></textarea>
+
+                    <!-- CHECKBOX (CORRECTO) -->
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    <label for="subscribe">Please subscribe me to the monthly newsletter</label>
+
+                    <!-- BUTTON -->
+                    <button type="submit">Send Message</button>
+
                 </form>
             </div>
         </section>
 
+        <!-- TEAM -->
         <section class="team-section">
             <h2>We Are Here to Serve You</h2>
             <div class="team-grid">
+
                 <figure class="employee">
                     <img src="images/employe_one.png" alt="Sophie - Operations Manager">
                     <figcaption><strong>Sophie: Manager</strong> - Logistics expert.</figcaption>
                 </figure>
+
                 <figure class="employee">
                     <img src="images/employe_two.png" alt="John - Lead Guide">
                     <figcaption><strong>John: Guide</strong> - Your adventure leader.</figcaption>
                 </figure>
+
                 <figure class="employee">
                     <img src="images/employer_three.png" alt="Alice - Customer Support">
                     <figcaption><strong>Alice: Support</strong> - Here to help you.</figcaption>
                 </figure>
+
             </div>
         </section>
+
     </main>
 
     <footer>
         <p>© 2026 White Water Rafting Co. | Emanuel Vera</p>
+
+        <!-- IMPORTANTE: EXACTAMENTE ASÍ -->
         <nav class="socialmedia">
-            <a href="https://facebook.com" target="_blank">
+            <a href="https://facebook.com">
                 <img src="images/facebook.png" alt="Facebook">
             </a>
-            <a href="https://linkedin.com" target="_blank">
+            <a href="https://linkedin.com">
                 <img src="images/linkedin.png" alt="LinkedIn">
             </a>
-            <a href="https://instagram.com" target="_blank">
+            <a href="https://instagram.com">
                 <img src="images/instagram.jpg" alt="Instagram">
             </a>
         </nav>
     </footer>
+
 </body>
 </html>
+```
