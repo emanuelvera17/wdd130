@@ -4,108 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - White Water Rafting Co.</title>
-    <meta name="description" content="Contact White Water Rafting Co. for reservations, questions, or suggestions. Get in touch with our expert team today.">
+    <meta name="description" content="Contact us for reservations or questions. Our team of experts is ready to help you plan your next river adventure.">
     <meta name="author" content="Emanuel Vera">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
-
 <body>
+    <header>
+        <img src="images/logo_rafting.png" alt="Rafting Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
 
-<header>
-    <img src="images/logo_rafting.png" alt="White Water Rafting Company Logo" class="logo">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="trips.html">Trips</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
-</header>
+    <main>
+        <section class="company-info">
+            <h1>White Water Rafting Company</h1>
+            <p>123 Main River Street, Kolob, California</p>
+            <p>+1 999 999 9999 | info@whitewater.com</p>
+        </section>
 
-<main>
-    <div class="company-header">
-        <h1>White Water Rafting Company</h1>
-        <p>123 Main River Street</p>
-        <p>Kolob, California</p>
-        <p>+1 999 999 9999</p>
-        <p>info@whitewater.com</p>
-    </div>
+        <section class="contact-layout">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d48547.42341289199!2d-117.37235482094378!3d33.674747604674856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1775877795995!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
 
-    <div class="contact-grid">
-        <div class="map-container">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15053.447348421894!2d-86.84!3d20.511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smx!4v1712280000000!5m2!1sen!2smx" 
-                title="Google Maps showing our location"
-                height="400" 
-                loading="lazy">
-            </iframe>
-        </div>
+            <div class="form-container">
+                <form action="#" method="post">
+                    <label for="user_name">Name</label>
+                    <input type="text" id="user_name" name="user_name" placeholder="Your Name" required>
+                    
+                    <label for="user_email">Email</label>
+                    <input type="email" id="user_email" name="user_email" placeholder="Your Email" required>
+                    
+                    <fieldset>
+                        <legend>Message Purpose</legend>
+                        <label><input type="radio" name="purpose" value="general"> General Inquiry</label>
+                        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
+                        <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                    </fieldset>
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="user_message" rows="4" placeholder="Type here..." required></textarea>
+                    
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="subscribe" checked> Please Subscribe me to the monthly newsletter
+                    </label>
+                    
+                    <button type="submit">Get in Touch!</button>
+                </form>
+            </div>
+        </section>
 
-        <div class="form-container">
-            <form action="#" method="post">
-                <div class="input-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="user_name" placeholder="Your Name" required>
+        <section class="team-section">
+            <h2>We Are Here to Serve You</h2>
+            <div class="team-grid">
+                <div class="employee">
+                    <img src="images/employe_one.png" alt="Employee Profile">
+                    <p><strong>Sophie: Manager</strong></p>
+                    <p> I´m in charge in the logistic and she is manager </p>
                 </div>
-                
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="user_email" placeholder="Your Email" required>
+                <div class="employee">
+                    <img src="images/employe_two.png" alt="Employee Profile">
+                    <p><strong>John: Guide</strong></p>
+                    <p>I´m in charge of lead you in all your experience</p>
                 </div>
-                
-                <p><strong>Message Purpose</strong></p>
-                <div class="radio-options">
-                    <label for="general"><input type="radio" id="general" name="purpose" value="general" checked> General Inquiry</label>
-                    <label for="reservation"><input type="radio" id="reservation" name="purpose" value="reservation"> Reservation Question</label>
-                    <label for="suggestion"><input type="radio" id="suggestion" name="purpose" value="suggestion"> Website Suggestion</label>
+                <div class="employee">
+                    <img src="images/employer_three.png" alt="Employee Profile">
+                    <p><strong>Alice: Support area</strong></p>
+                    <p>I´m in charge in help you out in anything</p>
                 </div>
+            </div>
+        </section>
+    </main>
 
-                <div class="input-group">
-                    <label for="msg">Message</label>
-                    <textarea id="msg" name="user_message" placeholder="Type here..." rows="4" required></textarea>
-                </div>
-
-                <label class="newsletter" for="subscribe">
-                    <input type="checkbox" id="subscribe" name="subscribe_newsletter"> Please subscribe me to the monthly newsletter
-                </label>
-                
-                <button type="submit">Get in Touch!</button>
-            </form>
-        </div>
-    </div>
-
-    <section class="team-section">
-        <h2>We Are Here to Serve You</h2>
-        <div class="team-display">
-            <figure>
-                <img src="images/employe_two.png" alt="Portrait of Vera Pérez, our Lead Rafting Guide">
-                <figcaption>Vera Pérez - Lead Guide</figcaption>
-            </figure>
-            <figure>
-                <img src="images/employe_one.png" alt="Portrait of Ana López, our Operations Manager">
-                <figcaption>Ana López - Operations Manager</figcaption>
-            </figure>
-            <figure>
-                <img src="images/employer_three.png" alt="Portrait of Ana Sofi, our Customer Support expert">
-                <figcaption>Ana Sofi - Customer Support</figcaption>
-            </figure>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <p>© 2026 White Water Rafting Co. | Emanuel Vera</p>
-    <nav class="socialmedia">
-        <a href="https://facebook.com">
-            <img src="images/facebook.png" alt="Follow us on Facebook">
-        </a>
-        <a href="https://linkedin.com">
-            <img src="images/linkedin.png" alt="Connect with us on LinkedIn">
-        </a>
-        <a href="https://instagram.com">
-            <img src="images/instagram.jpg" alt="Follow us on Instagram">
-        </a>
-    </nav>
-</footer>
-
-</body>
-</html>
+    <footer>
+        <p>© 2026 White Water Rafting Co.

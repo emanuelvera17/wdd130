@@ -1,100 +1,156 @@
+/* --- VARIABLES (:root) --- */
 :root {
-  --primary-color: #1b4965;
-  --secondary-color: #62b6cb;
+  --primary-color: #1b4965; /* Azul oscuro */
+  --secondary-color: #62b6cb; /* Azul claro */
   --accent1-color: #cae9ff;
   --accent2-color: #5fa8d3;
+  --heading-font: "Times New Roman", Georgia, serif;
+  --body-font: Arial, Helvetica, sans-serif;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* --- RESET & ESTRUCTURA --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--secondary-color);
-  color: #333;
+  font-family: var(--body-font);
+  color: var(--primary-color);
+  background-color: #f0f4f8;
 }
 
 header, main, footer {
-  max-width: 1000px;
+  max-width: 840px; /* Requisito de ancho máximo */
   margin: 0 auto;
   background-color: white;
 }
 
-/* HEADER */
+/* --- HEADER & NAV (Corrección de Contraste) --- */
 header {
   background-color: var(--primary-color);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 120px 1fr;
   align-items: center;
-  padding: 15px 30px;
-  border-bottom: 5px solid var(--accent2-color);
+  padding: 10px 20px;
 }
 
-header img { width: 100px; }
+header img {
+  width: 100px;
+}
 
-header nav { display: flex; gap: 20px; }
+nav {
+  display: flex;
+  justify-content: space-around;
+}
 
-header nav a {
-  color: white; /* Asegura buen contraste (WCAG AA) */
+nav a {
   text-decoration: none;
+  color: white; /* Corregido: Blanco para pasar prueba de contraste */
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 10px;
 }
 
-header nav a:hover {
-  text-decoration: underline;
+nav a:hover {
+  color: var(--secondary-color);
 }
 
-/* INFO EMPRESA */
-.company-header {
+/* --- HERO SECTION (Corrección de Posicionamiento) --- */
+.hero {
+  position: relative; /* Necesario para el overlay */
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero h1 {
+  position: absolute; /* Flota sobre la imagen */
+  top: 20px;
+  width: 100%;
+  padding: 15px;
   text-align: center;
-  padding: 30px;
+  background-color: rgba(27, 73, 101, 0.7); /* Transparencia */
+  color: white;
+  font-family: var(--heading-font);
 }
 
-.company-header h1 { color: var(--primary-color); }
+.hero article {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  right: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+}
 
-/* GRID CONTACTO */
-.contact-grid {
+.hero article img {
+  float: right; /* Requisito de la Semana 3/4 */
+  width: 150px;
+  margin-left: 15px;
+}
+
+/* --- SECCIÓN DE AVENTURA (Corrección imágenes pequeñas) --- */
+/* Esta es la parte para que tus fotos de About Us se vean bien */
+.adventure-section { 
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 20px;
+}
+
+.adventure-section figure {
+  flex: 1; 
+  text-align: center;
+}
+
+.adventure-section img {
+  width: 100%; /* Escala al contenedor */
+  height: 120px; 
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* --- FORMULARIO & TABLA (Semanas 5 y 6) --- */
+.contact-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 20px;
   padding: 20px;
-  background-color: var(--accent1-color);
 }
 
-.map-container iframe {
-    width: 100%; /* El CSS sí acepta porcentajes sin problemas */
-    border: none;
-    border-radius: 8px;
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-/* FORMULARIO */
-.form-container form { display: flex; flex-direction: column; gap: 15px; }
-.input-group { display: flex; flex-direction: column; }
-.input-group label { font-weight: bold; margin-bottom: 5px; }
-input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+input, textarea, fieldset {
+  margin-bottom: 10px;
+  padding: 8px;
+}
 
-button {
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+th {
   background-color: var(--primary-color);
   color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
 }
 
-/* TEAM */
-.team-section { padding: 40px 20px; text-align: center; }
-.team-display { display: flex; justify-content: space-around; gap: 15px; }
-.team-display figure img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 4px solid var(--primary-color);
-}
-
-/* FOOTER */
+/* --- FOOTER --- */
 footer {
   background-color: var(--primary-color);
   color: white;
@@ -104,5 +160,11 @@ footer {
   align-items: center;
 }
 
-.socialmedia { display: flex; gap: 10px; }
-.socialmedia img { width: 30px; }
+.socialmedia {
+  display: flex;
+  gap: 15px;
+}
+
+.socialmedia img {
+  width: 25px;
+}
